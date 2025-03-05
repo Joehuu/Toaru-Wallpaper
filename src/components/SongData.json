@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "name": "only my railgun",
+    "backgroundColor": "#1d2127",
+    "lineColor": "rgba(15, 134, 171, .9)"
+  },
+  {
+    "id": 2,
+    "name": "LEVEL5 -judgelight-",
+    "backgroundColor": "#2e372d",
+    "lineColor": "rgba(132, 143, 150, .9)"
+  },
+  {
+    "id": 3,
+    "name": "Dear My Friend -Towards an Unseen Future-",
+    "nameOriginal": "Dear My Friend −まだ見ぬ未来へ−",
+    "nameRomanized": "Dear My Friend -Mada Minu Mirai e-",
+    "backgroundColor": "#3a3b4a",
+    "lineColor": "rgba(183, 104, 87, .9)"
+  },
+  {
+    "id": 4,
+    "name": "SMILE −You & Me−",
+    "album": "Dear My Friend -Towards an Unseen Future-",
+    "backgroundColor": "#3a3b4a",
+    "lineColor": "rgba(183, 104, 87, .9)"
+  },
+  {
+    "id": 5,
+    "name": "Real Force",
+    "backgroundColor": "#424a4a",
+    "lineColor": "rgba(153, 158, 152, .9)"
+  },
+  {
+    "id": 6,
+    "name": "future gazer",
+    "backgroundColor": "#30303f",
+    "lineColor": "rgba(234, 227, 220, .9)"
+  },
+  {
+    "id": 7,
+    "filename": "Special _ONE_",
+    "name": "Special \"ONE\"",
+    "backgroundColor": "#45682e",
+    "lineColor": "rgba(117, 181, 101, .9)"
+  },
+  {
+    "id": 8,
+    "name": "sister's noise",
+    "backgroundColor": "#12276c",
+    "lineColor": "rgba(13, 134, 194, .9)"
+  },
+  {
+    "id": 9,
+    "name": "eternal reality",
+    "backgroundColor": "#2c3853",
+    "lineColor": "rgba(95, 122, 157, .9)"
+  },
+  {
+    "id": 10,
+    "name": "Grow Slowly",
+    "backgroundColor": "#2f3e42",
+    "lineColor": "rgba(104, 134, 151, .9)"
+  },
+  {
+    "id": 11,
+    "name": "stand still",
+    "album": "Grow Slowly",
+    "backgroundColor": "#2f3e42",
+    "lineColor": "rgba(104, 134, 151, .9)"
+  },
+  {
+    "id": 12,
+    "name": "Links",
+    "nameOriginal": "リンクス",
+    "backgroundColor": "#29335e",
+    "lineColor": "rgba(98, 164, 209, .9)"
+  },
+  {
+    "id": 13,
+    "name": "Infinia",
+    "nameOriginal": "インフィニア",
+    "album": "Links",
+    "backgroundColor": "#29335e",
+    "lineColor": "rgba(98, 164, 209, .9)"
+  },
+  {
+    "id": 14,
+    "name": "final phase",
+    "backgroundColor": "#253240",
+    "lineColor": "rgba(142, 189, 189, .9)"
+  },
+  {
+    "id": 15,
+    "name": "dual existence",
+    "backgroundColor": "#353b4a",
+    "lineColor": "rgba(105, 125, 134, .9)"
+  },
+  {
+    "id": 16,
+    "name": "nameless story",
+    "backgroundColor": "#464d64",
+    "lineColor": "rgba(94, 149, 207, .9)"
+  },
+  {
+    "id": 17,
+    "name": "Aoarashi no Ato de",
+    "nameOriginal": "青嵐のあとで",
+    "backgroundColor": "#231e22",
+    "lineColor": "rgba(131, 104, 85, .9)"
+  }
+]

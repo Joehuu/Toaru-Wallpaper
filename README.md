@@ -1,5 +1,5 @@
-#  source-name Wallpaper
-This is a web-based wallpaper inspired from source-name. This website features a music player and a playlist that allows users to browse the playlist
+#  Toaru Kagaku no Railgun Wallpaper
+This is a web-based wallpaper inspired from the anime Toaru Kagaku no Railgun. This website features a music player and a playlist that allows users to browse the playlist
 and create their own custom playlist.
 
 ##  Thumbnail
@@ -9,7 +9,7 @@ and create their own custom playlist.
 <img src="./public/assets/github/thumbnail_2.png" />
 
 ##  Steam Workshop Link:
-[source-name]()
+[Toaru Kagaku no Railgun とある科学の超電磁砲 (Album)]()
 
 ## To create your own custom playlist
 You need to have Node/NPM to be installed in your system to be able to build the file into a static HTML file. Every song in the playlist is stored in the SongData.json, which is the file

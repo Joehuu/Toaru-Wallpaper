@@ -53,11 +53,11 @@ const Main = () => {
     if (x === "shuffle") {
       setShuffle(y);
       setReplay(false);
-      localStorage.setItem("source-name-repeat-shuffle", `[${false}, ${y}]`);
+      localStorage.setItem("railgun-repeat-shuffle", `[${false}, ${y}]`);
     } else {
       setReplay(y);
       setShuffle(false);
-      localStorage.setItem("source-name-repeat-shuffle", `[${y}, ${false}]`);
+      localStorage.setItem("railgun-repeat-shuffle", `[${y}, ${false}]`);
     }
   };
 
@@ -130,14 +130,14 @@ const Main = () => {
       let tempArray = [...songList];
       tempArray[y - 1].push(x);
       setSongList(tempArray);
-      localStorage.setItem("source-name-playlist", JSON.stringify(tempArray));
+      localStorage.setItem("railgun-playlist", JSON.stringify(tempArray));
     }
   };
 
   const removeSong = (y) => {
     songList[y - 1].splice(getKey(y), 1);
     setSongList([...songList]);
-    localStorage.setItem("source-name-playlist", JSON.stringify(songList));
+    localStorage.setItem("railgun-playlist", JSON.stringify(songList));
   };
 
   const changeId = (e) => {
@@ -148,7 +148,7 @@ const Main = () => {
   const changeMode = (e) => {
     //Changes mode ~the playlist of what the user is using
     setMode(e);
-    localStorage.setItem("source-name-mode", e);
+    localStorage.setItem("railgun-mode", e);
   };
 
   const [prevMode, setPrevMode] = React.useState();
@@ -190,17 +190,17 @@ const Main = () => {
           : "true",
       );
       setMode(
-        localStorage.getItem("source-name-mode") !== null
-          ? parseInt(localStorage.getItem("source-name-mode"))
+        localStorage.getItem("railgun-mode") !== null
+          ? parseInt(localStorage.getItem("railgun-mode"))
           : 0,
       );
       setSongList(
-        localStorage.getItem("source-name-playlist") !== null
-          ? JSON.parse(localStorage.getItem("source-name-playlist"))
+        localStorage.getItem("railgun-playlist") !== null
+          ? JSON.parse(localStorage.getItem("railgun-playlist"))
           : [[], []],
       );
-      if (localStorage.getItem("source-name-repeat-shuffle") !== null) {
-        let temp14 = JSON.parse(localStorage.getItem("source-name-repeat-shuffle"));
+      if (localStorage.getItem("railgun-repeat-shuffle") !== null) {
+        let temp14 = JSON.parse(localStorage.getItem("railgun-repeat-shuffle"));
         setReplay(temp14[0]);
         setShuffle(temp14[1]);
       } else {
@@ -217,12 +217,12 @@ const Main = () => {
       setPlaylist("true");
       localStorage.setItem("playlistH", "true");
       setMode(0);
-      localStorage.setItem("source-name-mode", 0);
+      localStorage.setItem("railgun-mode", 0);
       setSongList([[], []]);
-      localStorage.setItem("source-name-playlist", JSON.stringify([[], []]));
+      localStorage.setItem("railgun-playlist", JSON.stringify([[], []]));
       setReplay(false);
       setShuffle(true);
-      localStorage.setItem("source-name-repeat-shuffle", JSON.stringify([true, false]));
+      localStorage.setItem("railgun-repeat-shuffle", JSON.stringify([true, false]));
     }
   }, []);
 
