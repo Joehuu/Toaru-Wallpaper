@@ -9,7 +9,7 @@ and create their own custom playlist.
 <img src="./public/assets/github/thumbnail_2.png" />
 
 ##  Steam Workshop Link:
-[Toaru Kagaku no Railgun とある科学の超電磁砲 (Album)]()
+[Toaru Kagaku no Railgun とある科学の超電磁砲 (Album)](https://steamcommunity.com/sharedfiles/filedetails/?id=3439284812)
 
 ## To create your own custom playlist
 You need to have Node/NPM to be installed in your system to be able to build the file into a static HTML file. Every song in the playlist is stored in the SongData.json, which is the file
