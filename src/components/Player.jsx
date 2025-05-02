@@ -113,7 +113,7 @@ const Player = (props) => {
   React.useEffect(() => {
     audioRef.current.pause();
     audioRef.current.src =
-      `./assets/songs/${toFilename(SongData[props.songIndex].name)}${SongData[props.songIndex]?.audioType ?? ".mp3"}`;
+      `./assets/songs/${toFilename(SongData[props.songIndex].name)}${SongData[props.songIndex]?.audioType ?? ".opus"}`;
     if (isReady.current) {
       audioRef.current.play();
       setPlaying(true);
