@@ -53,7 +53,7 @@ const Main = () => {
   const lyricsHandler = () => {
     //Toggles the lyrics
     setHasLyrics(hasLyrics === "true" ? "false" : "true");
-    localStorage.setItem("lyricsBocchi", hasLyrics === "true" ? "false" : "true");
+    localStorage.setItem("railgun-lyrics", hasLyrics === "true" ? "false" : "true");
   };
 
   const reShuffle = (x, y) => {
@@ -208,8 +208,8 @@ const Main = () => {
           : [[], []],
       );
       setHasLyrics(
-        localStorage.getItem("lyricsBocchi") !== null
-          ? localStorage.getItem("lyricsBocchi")
+        localStorage.getItem("railgun-lyrics") !== null
+          ? localStorage.getItem("railgun-lyrics")
           : "true",
       );
       if (localStorage.getItem("railgun-repeat-shuffle") !== null) {
@@ -236,7 +236,7 @@ const Main = () => {
       setReplay(false);
       setShuffle(true);
       localStorage.setItem("railgun-repeat-shuffle", JSON.stringify([true, false]));
-      localStorage.setItem("lyricsBocchi", "true");
+      localStorage.setItem("railgun-lyrics", "true");
     }
   }, []);
 
