@@ -16,8 +16,10 @@ const Main = () => {
   const [audioVis, setAudioVis] = React.useState("true");
   const [mode, setMode] = React.useState(0);
   const [playlist, setPlaylist] = React.useState("true");
+  const [hasLyrics, setHasLyrics] = React.useState("true");
   const [shuffle, setShuffle] = React.useState(true);
   const [replay, setReplay] = React.useState(true);
+  const [wpePaused, setWPEPaused] = React.useState(false);
   const [songList, setSongList] = React.useState([[], []]);
   const [uiVolume, setUiVolume] = React.useState(0.5);
   const [textSize, setTextSize] = React.useState(1);
@@ -46,6 +48,12 @@ const Main = () => {
     //Changes and sets the playlist
     setPlaylist(playlist === "true" ? "false" : "true");
     localStorage.setItem("playlistH", playlist === "true" ? "false" : "true");
+  };
+
+  const lyricsHandler = () => {
+    //Toggles the lyrics
+    setHasLyrics(hasLyrics === "true" ? "false" : "true");
+    localStorage.setItem("lyricsBocchi", hasLyrics === "true" ? "false" : "true");
   };
 
   const reShuffle = (x, y) => {
@@ -199,6 +207,11 @@ const Main = () => {
           ? JSON.parse(localStorage.getItem("railgun-playlist"))
           : [[], []],
       );
+      setHasLyrics(
+        localStorage.getItem("lyricsBocchi") !== null
+          ? localStorage.getItem("lyricsBocchi")
+          : "true",
+      );
       if (localStorage.getItem("railgun-repeat-shuffle") !== null) {
         let temp14 = JSON.parse(localStorage.getItem("railgun-repeat-shuffle"));
         setReplay(temp14[0]);
@@ -223,6 +236,7 @@ const Main = () => {
       setReplay(false);
       setShuffle(true);
       localStorage.setItem("railgun-repeat-shuffle", JSON.stringify([true, false]));
+      localStorage.setItem("lyricsBocchi", "true");
     }
   }, []);
 
@@ -233,6 +247,9 @@ const Main = () => {
         if (properties.uiVolume) setUiVolume(properties.uiVolume.value * 0.1);
         if (properties.textsize) setTextSize(properties.textsize.value / 10);
         if (properties.titledisplay) setTitleDisplay(properties.titledisplay.value)
+      },
+      setPaused: function (isPaused) {
+        setWPEPaused(isPaused);
       },
     };
   } catch (e) {
@@ -263,6 +280,7 @@ const Main = () => {
         changeSong={changeSong}
         visualizerHandler={visualizerHandler}
         songIndex={songIndex}
+        lyricsHandler={lyricsHandler}
       />
       {playlist === "true" ? (
         <Playlist
@@ -296,14 +314,19 @@ const Main = () => {
           textSize={textSize}
           titleDisplay={titleDisplay}
           audioRef={audioRef}
+          wpePaused={wpePaused}
         />
       ) : null}
-      <Lyrics
-        songIndex={songIndex}
-        audioRef={audioRef}
-        uiVolume={uiVolume}
-      />
-    </div>
+      {
+        hasLyrics === "true" && (
+          <Lyrics
+            songIndex={songIndex}
+            audioRef={audioRef}
+            uiVolume={uiVolume}
+          />
+        )
+      }
+   </div>
   );
 };
 
