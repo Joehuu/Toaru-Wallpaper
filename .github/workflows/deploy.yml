@@ -11,22 +11,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        id: pnpm-install
         with:
-          version: 7
-          run_install: false
+          version: latest
 
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+
       - name: Setup pnpm cache
         uses: actions/cache@v4
         with:
@@ -34,19 +28,20 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
+
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
 
       - name: Build project
-        run: CI=false pnpm run build
+        run: pnpm run build
 
       - name: Upload static files as artifact
-        id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
   
   deploy:
+    name: Deploy
     needs: build
 
     permissions:
