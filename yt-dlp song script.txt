@@ -1,17 +1,37 @@
+// Railgun
 yt-dlp -x "https://www.youtube.com/watch?v=ZhIxg6_Femo" -o "only my railgun"
 yt-dlp -x "https://www.youtube.com/watch?v=W4YbIxlfw8k" -o "LEVEL5 -judgelight-"
 yt-dlp -x "https://www.youtube.com/watch?v=8x_v7aOLg2Q" -o "Dear My Friend -Towards an Unseen Future-"
 yt-dlp -x "https://www.youtube.com/watch?v=t9hLi7BvGrI" -o "SMILE −You & Me−"
 yt-dlp -x "https://www.youtube.com/watch?v=g8hFjx_yfx8" -o "Real Force"
+
 yt-dlp -x "https://www.youtube.com/watch?v=O6mJe0HoSg8" -o "future gazer"
 yt-dlp -x "https://www.youtube.com/watch?v=hQHHPPiojVM" -o "Special _ONE_"
+
 yt-dlp -x "https://www.youtube.com/watch?v=e6g3mkqhFzo" -o "sister's noise"
 yt-dlp -x "https://www.youtube.com/watch?v=UrWat71YxLA" -o "eternal reality"
 yt-dlp -x "https://www.youtube.com/watch?v=Ph2Mq1T8xGc" -o "Grow Slowly"
 yt-dlp -x "https://www.youtube.com/watch?v=PWjD3MmDlGU" -o "stand still"
 yt-dlp -x "https://www.youtube.com/watch?v=eHdG808dM24" -o "Links"
 yt-dlp -x "https://www.youtube.com/watch?v=Wv1pVXQfGfw" -o "Infinia"
+
 yt-dlp -x "https://www.youtube.com/watch?v=gQ91NaeO2To" -o "final phase"
 yt-dlp -x "https://www.youtube.com/watch?v=mtBGt4ghlxk" -o "dual existence"
 yt-dlp -x "https://www.youtube.com/watch?v=jbpcXLcchrA" -o "nameless story"
 yt-dlp -x "https://www.youtube.com/watch?v=gTFeQHPLmNE" -o "Aoarashi no Ato de"
+
+// Index
+yt-dlp -x "https://www.youtube.com/watch?v=E3hRBdvM58M" -o "PSI-missing" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=ZvLDq21jAXU" -o "masterpiece" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=NxzLowBRkhk" -o "Rimless ~Fuchinashi no Sekai~" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=C8Fm6zazAWg" -o "Chikaigoto ~Sukoshi Dake Mou Ichido~" --audio-format opus
+
+yt-dlp -x "https://www.youtube.com/watch?v=j0XwN7EuKvY" -o "No buts!" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=yU5_cA5PHA8" -o "See visionS" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=YHesNZHrCIo" -o "Magic∞world" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=e6C9vPCwHqA" -o "Memories Last" --audio-format opus
+
+yt-dlp -x "https://www.youtube.com/watch?v=BlzB65AUuCw" -o "Gravitation" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=fr7Y9BjB3Ew" -o "ROAR" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=xFgzWyESqDs" -o "Kakumei Zen'ya" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=xU7MNzpFu64" -o "Owaranai Uta" --audio-format opus
