@@ -193,9 +193,9 @@ const Player = (props) => {
             style={{
               fontSize: `${titleSize * props.textSize}rem`,
             }}
-          >{`${
-            title
-          }`}</p>
+          >
+            {title} {SongData[props.songIndex].tvSize ? "(TV Size)" : ""}
+          </p>
         </div>{" "}
         <div
           className="w-full flex items-center justify-center"

@@ -48,7 +48,7 @@ const PlaylistItem = (props) => {
           borderRadius: props.songIndex === props.id - 1 ? "5px" : "0px",
         }}
       >
-        {props.index}. {title}
+        {props.index}. {title} {SongData[props.id - 1].tvSize ? "(TV Size)" : ""}
       </p>
     </div>
   );
