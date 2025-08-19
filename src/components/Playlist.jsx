@@ -28,10 +28,10 @@ const Playlist = (props) => {
         if (playlistPages + e >= 0) {
           setPlaylistPages(playlistPages + e);
         } else {
-          setPlaylistPages(Math.trunc((SongData.length - 1) / 5));
+          setPlaylistPages(Math.trunc((props.filteredSongData.length - 1) / 5));
         }
       } else if (e === 1) {
-        if (playlistPages + e < SongData.length / 5) {
+        if (playlistPages + e < props.filteredSongData.length / 5) {
           setPlaylistPages(playlistPages + e);
         } else {
           setPlaylistPages(0);
@@ -48,24 +48,16 @@ const Playlist = (props) => {
           setPlaylistPages(playlistPages + e);
         } else {
           setPlaylistPages(
-            Math.trunc((props.songList[props.mode - 1].length - 1) / 5),
+            Math.trunc((props.getFilteredSongList().length - 1) / 5),
           );
         }
       } else if (e === 1) {
-        if (playlistPages + e < props.songList[props.mode - 1].length / 5) {
+        if (playlistPages + e < props.getFilteredSongList().length / 5) {
           setPlaylistPages(playlistPages + e);
         } else {
           setPlaylistPages(0);
         }
       }
-      // if (
-      //   playlistPages + e < props.songList[props.mode - 1].length / 5 &&
-      //   playlistPages + e > 0
-      // ) {
-      //   setPlaylistPages(playlistPages + 1);
-      // } else {
-      //   setPlaylistPages(0);
-      // }
     }
     audioPlay(1);
   };
@@ -79,10 +71,12 @@ const Playlist = (props) => {
 
   React.useEffect(() => {
     if (props.mode === 0)
-      setPlaylistPages(Math.trunc(props.songIndex / 5));
+      setPlaylistPages(Math.trunc(props.filteredSongData.findIndex(x => x.id === props.songIndex + 1) / 5));
     else
-      setPlaylistPages(Math.trunc(props.songList[props.mode - 1].findIndex((x) => x === props.songIndex + 1) / 5));
-  }, [props.mode, props.songIndex, props.songList]);
+      setPlaylistPages(Math.trunc(props.getFilteredSongList().findIndex((x) => x === props.songIndex + 1) / 5));
+  // ignore props dep for props.getFilteredSongList()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [props.filteredSongData, props.mode, props.songIndex, props.songList]);
 
   React.useLayoutEffect(() => {
     const updateTitleSize = () => {
@@ -140,7 +134,7 @@ const Playlist = (props) => {
       <div className="playlist-container" style={{ height: "80%" }}>
         <div className="playlist-item-container">
           {props.mode === 0
-            ? SongData.slice(playlistPages * 5, playlistPages * 5 + 5).map(
+            ? props.filteredSongData.slice(playlistPages * 5, playlistPages * 5 + 5).map(
                 (e, index) => (
                   <PlaylistItem
                     uiVolume={props.uiVolume}
@@ -157,8 +151,8 @@ const Playlist = (props) => {
             : null}
 
           {props.mode === 1
-            ? props.songList[0] !== null
-              ? props.songList[0]
+            ? props.getFilteredSongList() !== null
+              ? props.getFilteredSongList()
                   .slice(playlistPages * 5, playlistPages * 5 + 5)
                   .map((e, index) => (
                     <PlaylistItem
@@ -177,8 +171,8 @@ const Playlist = (props) => {
             : null}
 
           {props.mode === 2
-            ? props.songList[1] !== null
-              ? props.songList[1]
+            ? props.getFilteredSongList() !== null
+              ? props.getFilteredSongList()
                   .slice(playlistPages * 5, playlistPages * 5 + 5)
                   .map((e, index) => (
                     <PlaylistItem

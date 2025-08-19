@@ -7,8 +7,10 @@ import SongData from "./components/SongData.json";
 import Playlist from "./components/Playlist";
 import TitleDisplay from "./TitleDisplay";
 import LyricsDisplay from "./LyricsDisplay";
+import Series from "./Series";
 import { toFilename } from "./helpers";
 import Lyrics from "./components/Lyrics";
+import SeriesControl from "./components/SeriesControl";
 
 const Main = () => {
   const [songIndex, setIndex] = React.useState(0);
@@ -27,6 +29,9 @@ const Main = () => {
   const [titleDisplay, setTitleDisplay] = React.useState(TitleDisplay.English);
   const [lyricsDisplay, setLyricsDisplay] = React.useState(LyricsDisplay.Both);
   const [use24HourClock, set24HourClock] = React.useState(true);
+  const [series, setSeries] = React.useState(Series.Railgun);
+  const filteredSongData = SongData.filter(song => song.series.toLowerCase() === series || series === Series.All);
+  const getFilteredSongList = () => songList[mode - 1].filter(i => filteredSongData.map(song => song.id).includes(i));
   const audioRef = React.useRef(new Audio());
 
   const playerHandler = () => {
@@ -73,6 +78,8 @@ const Main = () => {
   };
 
   const getKey = (m) => songList[m - 1].findIndex((x) => x === songIndex + 1);
+  const getFilteredKey = () => getFilteredSongList().findIndex((x) => x === songIndex + 1);
+  const getFilteredSongIndex = filteredSongData.findIndex(x => x.id === songIndex + 1);
 
   const changeSong = (e) => {
     //Changes the song using conditions ~from player
@@ -82,52 +89,52 @@ const Main = () => {
         //Shuffle Scuffed mech
         if (e === true) {
           //Skip Button
-          if (songIndex + 1 < SongData.length) {
+          if (getFilteredSongIndex + 1 < filteredSongData.length) {
             setIndex(songIndex + 1);
           } else {
-            setIndex(0);
+            setIndex(filteredSongData[0].id - 1);
           }
         } else if (e === false) {
           //Prev Button
-          if (songIndex - 1 < 0) {
-            setIndex(SongData.length - 1);
+          if (getFilteredSongIndex - 1 < 0) {
+            setIndex(filteredSongData[filteredSongData.length - 1].id - 1);
           } else {
             setIndex(songIndex - 1);
           }
         }
       } else {
-        setIndex(Math.floor(SongData.length * Math.random()));
+        setIndex(Math.floor((filteredSongData[filteredSongData.length - 1].id - filteredSongData[0].id + 1) * Math.random()) + filteredSongData[0].id - 1);
       }
     } else if (
       (mode === 1 || mode === 2) &&
-      Array.isArray(songList[mode - 1]) &&
-      songList[mode - 1].length
+      Array.isArray(getFilteredSongList()) &&
+      getFilteredSongList().length
     ) {
       //Check if array is empty
       if (shuffle === false) {
-        const key = getKey(mode);
+        const key = getFilteredKey();
         if (e === true) {
-          if (key + 1 < songList[mode - 1].length) {
-            setIndex(songList[mode - 1][key + 1] - 1);
+          if (key + 1 < getFilteredSongList().length) {
+            setIndex(getFilteredSongList()[key + 1] - 1);
           } else {
-            setIndex(songList[mode - 1][0] - 1);
+            setIndex(getFilteredSongList()[0] - 1);
           }
         } else if (e === false) {
           if (key - 1 < 0) {
-            const tempSong = songList[mode - 1];
+            const tempSong = getFilteredSongList();
             const tempId = SongData.findIndex(
               (e) => e.id === tempSong[tempSong.length - 1],
             );
             setIndex(tempId);
           } else {
-            setIndex(songList[mode - 1][key - 1] - 1);
+            setIndex(getFilteredSongList()[key - 1] - 1);
           }
         }
       } else {
         //Shuffle, it won't need a key because it's random :>
         setIndex(
-          songList[mode - 1][
-            Math.floor(songList[mode - 1].length * Math.random())
+          getFilteredSongList()[
+            Math.floor(getFilteredSongList().length * Math.random())
           ] - 1,
         );
       }
@@ -162,16 +169,36 @@ const Main = () => {
     localStorage.setItem("railgun-mode", e);
   };
 
+  const changeSeries = (e) => {
+    setSeries(e);
+    localStorage.setItem("index-series", e);
+  };
+
   const [prevMode, setPrevMode] = React.useState();
 
   if (mode !== prevMode) {
     setPrevMode(mode);
     if (mode === 0) {
-      setIndex(Math.floor(SongData.length * Math.random()));
-    } else if (Array.isArray(songList[mode - 1]) && songList[mode - 1].length) {
+      setIndex(Math.floor((filteredSongData[filteredSongData.length - 1].id - filteredSongData[0].id + 1) * Math.random()) + filteredSongData[0].id - 1);
+    } else if (Array.isArray(getFilteredSongList()) && getFilteredSongList().length) {
       setIndex(
-        songList[mode - 1][
-        Math.floor(songList[mode - 1].length * Math.random())
+        getFilteredSongList()[
+        Math.floor(getFilteredSongList().length * Math.random())
+        ] - 1,
+      );
+    }
+  }
+
+  const [prevSeries, setPrevSeries] = React.useState();
+
+  if (series !== prevSeries) {
+    setPrevSeries(series);
+    if (mode === 0) {
+      setIndex(Math.floor((filteredSongData[filteredSongData.length - 1].id - filteredSongData[0].id + 1) * Math.random()) + filteredSongData[0].id - 1);
+    } else if (Array.isArray(getFilteredSongList()) && getFilteredSongList().length) {
+      setIndex(
+        getFilteredSongList()[
+        Math.floor(getFilteredSongList().length * Math.random())
         ] - 1,
       );
     }
@@ -215,6 +242,11 @@ const Main = () => {
           ? localStorage.getItem("railgun-lyrics")
           : "true",
       );
+      setSeries(
+        localStorage.getItem("index-series") !== null
+          ? localStorage.getItem("index-series")
+          : Series.Railgun,
+      )
       if (localStorage.getItem("railgun-repeat-shuffle") !== null) {
         let temp14 = JSON.parse(localStorage.getItem("railgun-repeat-shuffle"));
         setReplay(temp14[0]);
@@ -240,6 +272,7 @@ const Main = () => {
       setShuffle(true);
       localStorage.setItem("railgun-repeat-shuffle", JSON.stringify([true, false]));
       localStorage.setItem("railgun-lyrics", "true");
+      localStorage.setItem("index-series", Series.Railgun);
     }
   }, []);
 
@@ -299,6 +332,9 @@ const Main = () => {
           addSong={addSong}
           removeSong={removeSong}
           titleDisplay={titleDisplay}
+          series={series}
+          filteredSongData={filteredSongData}
+          getFilteredSongList={getFilteredSongList}
         />
       ) : null}
       {clock === "true" ? (
@@ -333,6 +369,12 @@ const Main = () => {
           />
         )
       }
+      <SeriesControl
+        songIndex={songIndex}
+        uiVolume={uiVolume}
+        series={series}
+        changeSeries={changeSeries}
+      />
    </div>
   );
 };
