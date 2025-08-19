@@ -22,7 +22,11 @@
   {
     "id": 4,
     "name": "SMILE −You & Me−",
-    "album": "Dear My Friend -Towards an Unseen Future-",
+    "albums": [
+      {
+        "name": "Dear My Friend -Towards an Unseen Future-"
+      }
+    ],
     "backgroundColor": "#3a3b4a",
     "lineColor": "rgba(183, 104, 87, .9)"
   },
@@ -65,7 +69,11 @@
   {
     "id": 11,
     "name": "stand still",
-    "album": "Grow Slowly",
+    "albums": [
+      {
+        "name": "Grow Slowly"
+      }
+    ],
     "backgroundColor": "#2f3e42",
     "lineColor": "rgba(104, 134, 151, .9)"
   },
@@ -80,7 +88,11 @@
     "id": 13,
     "name": "Infinia",
     "nameOriginal": "インフィニア",
-    "album": "Links",
+    "albums": [
+      {
+        "name": "Links"
+      }
+    ],
     "backgroundColor": "#29335e",
     "lineColor": "rgba(98, 164, 209, .9)"
   },

@@ -272,7 +272,7 @@ const Main = () => {
       <img
         className="mainImage"
         src={`./assets/icons/${
-          toFilename(SongData[songIndex].album ?? SongData[songIndex].name)
+          toFilename(SongData[songIndex].albums != null ? SongData[songIndex].albums[0].name : SongData[songIndex].name)
         }.jpg`}
         alt=""
         style={{ boxShadow: "1px 1px 12px #150625" }}
