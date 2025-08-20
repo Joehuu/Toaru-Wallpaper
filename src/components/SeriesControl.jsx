@@ -27,7 +27,7 @@ const SeriesControl = (props) => {
           Object.keys(Series).map((child, i) => (
             <button
             key={i}
-            className="h-full w-1/3"
+            className="h-1/2 w-1/3"
             onClick={() => onClick(child.toLowerCase())}
             style={{
               backgroundColor: child.toLowerCase() === props.series ? SongData[props.songIndex].lineColor : `transparent`,

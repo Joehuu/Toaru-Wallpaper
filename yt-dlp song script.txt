@@ -35,3 +35,7 @@ yt-dlp -x "https://www.youtube.com/watch?v=BlzB65AUuCw" -o "Gravitation" --audio
 yt-dlp -x "https://www.youtube.com/watch?v=fr7Y9BjB3Ew" -o "ROAR" --audio-format opus
 yt-dlp -x "https://www.youtube.com/watch?v=xFgzWyESqDs" -o "Kakumei Zen'ya" --audio-format opus
 yt-dlp -x "https://www.youtube.com/watch?v=xU7MNzpFu64" -o "Owaranai Uta" --audio-format opus
+
+// Accelerator
+yt-dlp -x "https://www.youtube.com/watch?v=qopVUcTCZB8" -o "Shadow is the Light" --audio-format opus
+yt-dlp -x "https://www.youtube.com/watch?v=tkh6nnlf9bs" -o "Parole" --audio-format opus

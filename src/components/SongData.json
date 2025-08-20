@@ -233,5 +233,19 @@
     "lineColor": "rgba(255, 255, 255, .9)",
     "series": "Index",
     "tvSize": true
+  },
+  {
+    "id": 30,
+    "name": "Shadow is the Light",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)",
+    "series": "Accelerator"
+  },
+  {
+    "id": 31,
+    "name": "Parole",
+    "backgroundColor": "#000000",
+    "lineColor": "rgba(255, 255, 255, .9)",
+    "series": "Accelerator"
   }
 ]
