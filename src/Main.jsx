@@ -13,6 +13,7 @@ import Lyrics from "./components/Lyrics";
 import SeriesControl from "./components/SeriesControl";
 
 const Main = () => {
+  let keypress = new Audio();
   const [songIndex, setIndex] = React.useState(0);
   const [player, setPlayer] = React.useState("true");
   const [clock, setClock] = React.useState("true");
@@ -174,6 +175,12 @@ const Main = () => {
     localStorage.setItem("index-series", e);
   };
 
+  const clickAudio = (e) => {
+    keypress.src = "./assets/audios/keypress.mp3";
+    keypress.volume = uiVolume;
+    keypress.play();
+  };
+
   const [prevMode, setPrevMode] = React.useState();
 
   if (mode !== prevMode) {
@@ -302,14 +309,27 @@ const Main = () => {
       {audioVis === "true" ? (
         <AudioVisualizer lineColor={SongData[songIndex].lineColor} />
       ) : null}
-      <img
-        className="mainImage"
-        src={`./assets/icons/${
-          toFilename(SongData[songIndex].albums != null ? SongData[songIndex].albums[0].name : SongData[songIndex].name)
-        }.jpg`}
-        alt=""
-        style={{ boxShadow: "1px 1px 12px #150625" }}
-      />
+      {filteredSongData.map((song, i) => (
+        <img
+          key={i}
+          className="mainImage"
+          src={`./assets/icons/${toFilename(filteredSongData[i].albums != null ? filteredSongData[i].albums[0].name : filteredSongData[i].name)
+            }.jpg`}
+          alt=""
+          style={{
+            right: `${Math.min(Math.max(getFilteredSongIndex - i, -1), 1) * 175}px`,
+            zIndex: getFilteredSongIndex === i ? filteredSongData.length : getFilteredSongIndex > i ? i : filteredSongData.length - i,
+            scale: getFilteredSongIndex === i ? "1" : "0.95",
+            opacity: i <= getFilteredSongIndex + 1 && i >= getFilteredSongIndex - 1 ? getFilteredSongIndex === i ? "1" : "0.25" : "0"
+          }}
+          onClick={(e) => {
+            if (e.target.style.opacity !== "0" && getFilteredSongIndex !== i) {
+              clickAudio();
+              setIndex(song.id - 1);
+            }
+          }}
+        />
+      ))}
       <Navigation
         uiVolume={uiVolume}
         playerHandler={playerHandler}

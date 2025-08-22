@@ -20,6 +20,7 @@ code {
 .Main {
   height: 100vh;
   width: 100vw;
+  transition: background-color 0.5s ease-out;
 }
 
 .mainClock {
@@ -51,6 +52,9 @@ code {
   right: 0;
   text-align: center;
   border-radius: 5px;
+  box-shadow: 1px 1px 12px #150625;
+  transition: right 0.5s, scale 0.5s, opacity 0.5s;
+  transition-timing-function: ease-out;
 }
 
 .navigation {
@@ -202,8 +206,8 @@ code {
   color: white;
   border-radius: 16px;
   top: 27.5%;
-  right: 72.5%;
-  width: 25%;
+  left: 2%;
+  width: 24%;
   height: 45%;
   text-align: center;
   box-shadow: 1px 1px 6px #150625;
