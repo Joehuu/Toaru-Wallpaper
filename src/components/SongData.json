@@ -141,45 +141,45 @@
   {
     "id": 18,
     "name": "PSI-missing",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#1f232a",
+    "lineColor": "rgba(192, 162, 56, .9)",
     "series": "Index"
   },
   {
     "id": 19,
     "name": "masterpiece",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#182334",
+    "lineColor": "rgba(95, 145, 197, .9)",
     "series": "Index"
   },
   {
     "id": 20,
     "name": "Rimless ~Fuchinashi no Sekai~",
     "nameOriginal": "Rimless ～フチナシノセカイ～",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#383551",
+    "lineColor": "rgba(213, 203, 224, .9)",
     "series": "Index"
   },
   {
     "id": 21,
     "name": "Chikaigoto ~Sukoshi Dake Mou Ichido~",
     "nameOriginal": "誓い言 ～スコシだけもう一度～",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#383551",
+    "lineColor": "rgba(213, 203, 224, .9)",
     "series": "Index"
   },
   {
     "id": 22,
     "name": "No buts!",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#243e65",
+    "lineColor": "rgba(137, 185, 224, .9)",
     "series": "Index"
   },
   {
     "id": 23,
     "name": "See visionS",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#141920",
+    "lineColor": "rgba(192, 197, 217, .9)",
     "series": "Index",
     "albums": [
       {
@@ -190,38 +190,38 @@
   {
     "id": 24,
     "name": "Magic∞world",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#411c2b",
+    "lineColor": "rgba(224, 206, 215, .9)",
     "series": "Index"
   },
   {
     "id": 25,
     "name": "Memories Last",
     "nameOriginal": "メモリーズ・ラスト",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#1f2c45",
+    "lineColor": "rgba(165, 203, 246, .9)",
     "series": "Index"
   },
   {
     "id": 26,
     "name": "Gravitation",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#2e323b",
+    "lineColor": "rgba(210, 206, 200, .9)",
     "series": "Index"
   },
   {
     "id": 27,
     "name": "ROAR",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#353e48",
+    "lineColor": "rgba(189, 198, 210, .9)",
     "series": "Index"
   },
   {
     "id": 28,
     "name": "Kakumei Zen'ya",
     "nameOriginal": "革命前夜",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#161c41",
+    "lineColor": "rgba(203, 202, 204, .9)",
     "series": "Index",
     "tvSize": true
   },
@@ -229,23 +229,23 @@
     "id": 29,
     "name": "Owaranai Uta",
     "nameOriginal": "終わらない歌",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#14222b",
+    "lineColor": "rgba(196, 218, 238, .9)",
     "series": "Index",
     "tvSize": true
   },
   {
     "id": 30,
     "name": "Shadow is the Light",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#281a31",
+    "lineColor": "rgba(242, 234, 239, .9)",
     "series": "Accelerator"
   },
   {
     "id": 31,
     "name": "Parole",
-    "backgroundColor": "#000000",
-    "lineColor": "rgba(255, 255, 255, .9)",
+    "backgroundColor": "#222a34",
+    "lineColor": "rgba(192, 190, 187, .9)",
     "series": "Accelerator"
   }
 ]
