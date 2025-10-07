@@ -6,3 +6,7 @@ This is a web-based wallpaper from the anime Toaru Majutsu no Index. The project
 
 ##  Steam Workshop Link:
 [Toaru Majutsu no Index とある魔術の禁書目録 (Album)](https://steamcommunity.com/sharedfiles/filedetails/?id=3439284812)
+
+## Other Wallpapers
+
+- [Shana-Wallpaper](https://github.com/Joehuu/Shana-Wallpaper)
