@@ -31,6 +31,7 @@ const Main = () => {
   const [lyricsDisplay, setLyricsDisplay] = React.useState(LyricsDisplay.Both);
   const [use24HourClock, set24HourClock] = React.useState(true);
   const [series, setSeries] = React.useState(Series.Railgun);
+  const [credits, setCredits] = React.useState(false);
   const filteredSongData = SongData.filter(song => song.series.toLowerCase() === series || series === Series.All);
   const getFilteredSongList = () => songList[mode - 1].filter(i => filteredSongData.map(song => song.id).includes(i));
   const audioRef = React.useRef(new Audio());
@@ -309,6 +310,12 @@ const Main = () => {
       {audioVis === "true" ? (
         <AudioVisualizer lineColor={SongData[songIndex].lineColor} />
       ) : null}
+      <div
+        style={{
+          zIndex: 727,
+          opacity: credits ? "1" : "0",
+        }}
+        className="mainImageCredits">Credits:<br />Lyrics (original): {SongData[songIndex].credits.lyrics.original}<br />Lyrics (romanized): {SongData[songIndex].credits.lyrics.romanized}<br />Timing: {SongData[songIndex].credits.timing}<br />Music: {SongData[songIndex].credits.music}</div>
       {filteredSongData.map((song, i) => (
         <img
           key={i}
@@ -320,12 +327,16 @@ const Main = () => {
             right: `${Math.min(Math.max(getFilteredSongIndex - i, -1), 1) * 175}px`,
             zIndex: getFilteredSongIndex === i ? filteredSongData.length : getFilteredSongIndex > i ? i : filteredSongData.length - i,
             scale: getFilteredSongIndex === i ? "1" : "0.95",
-            opacity: i <= getFilteredSongIndex + 1 && i >= getFilteredSongIndex - 1 ? getFilteredSongIndex === i ? "1" : "0.25" : "0"
+            opacity: i <= getFilteredSongIndex + 1 && i >= getFilteredSongIndex - 1 ? getFilteredSongIndex === i ? "1" : "0.25" : "0",
+            filter: getFilteredSongIndex === i && credits ? "brightness(10%)" : ""
           }}
           onClick={(e) => {
             if (e.target.style.opacity !== "0" && getFilteredSongIndex !== i) {
               clickAudio();
               setIndex(song.id - 1);
+            }
+            else {
+              setCredits(!credits);
             }
           }}
         />

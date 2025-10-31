@@ -4,14 +4,30 @@
     "name": "only my railgun",
     "backgroundColor": "#1d2127",
     "lineColor": "rgba(15, 134, 171, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 2,
     "name": "LEVEL5 -judgelight-",
     "backgroundColor": "#2e372d",
     "lineColor": "rgba(132, 143, 150, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 3,
@@ -20,7 +36,15 @@
     "nameRomanized": "Dear My Friend -Mada Minu Mirai e-",
     "backgroundColor": "#3a3b4a",
     "lineColor": "rgba(183, 104, 87, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors (modified by Joehu)",
+      "music": "YouTube"
+    }
   },
   {
     "id": 4,
@@ -32,49 +56,105 @@
     ],
     "backgroundColor": "#3a3b4a",
     "lineColor": "rgba(183, 104, 87, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "LRCLIB contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 5,
     "name": "Real Force",
     "backgroundColor": "#424a4a",
     "lineColor": "rgba(153, 158, 152, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 6,
     "name": "future gazer",
     "backgroundColor": "#30303f",
     "lineColor": "rgba(234, 227, 220, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Genius contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 7,
     "name": "Special \"ONE\"",
     "backgroundColor": "#45682e",
     "lineColor": "rgba(117, 181, 101, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Animelyrics.com contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 8,
     "name": "sister's noise",
     "backgroundColor": "#12276c",
     "lineColor": "rgba(13, 134, 194, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 9,
     "name": "eternal reality",
     "backgroundColor": "#2c3853",
     "lineColor": "rgba(95, 122, 157, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 10,
     "name": "Grow Slowly",
     "backgroundColor": "#2f3e42",
     "lineColor": "rgba(104, 134, 151, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 11,
@@ -86,7 +166,15 @@
     ],
     "backgroundColor": "#2f3e42",
     "lineColor": "rgba(104, 134, 151, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "Genius contributors",
+        "romanized": "Genius contributors"
+      },
+      "timing": "Joehu",
+      "music": "YouTube"
+    }
   },
   {
     "id": 12,
@@ -94,7 +182,15 @@
     "nameOriginal": "リンクス",
     "backgroundColor": "#29335e",
     "lineColor": "rgba(98, 164, 209, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 13,
@@ -107,28 +203,60 @@
     ],
     "backgroundColor": "#29335e",
     "lineColor": "rgba(98, 164, 209, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Anime Lyrics AZ"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 14,
     "name": "final phase",
     "backgroundColor": "#253240",
     "lineColor": "rgba(142, 189, 189, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 15,
     "name": "dual existence",
     "backgroundColor": "#353b4a",
     "lineColor": "rgba(105, 125, 134, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Genius contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 16,
     "name": "nameless story",
     "backgroundColor": "#464d64",
     "lineColor": "rgba(94, 149, 207, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 17,
@@ -136,21 +264,45 @@
     "nameOriginal": "青嵐のあとで",
     "backgroundColor": "#231e22",
     "lineColor": "rgba(131, 104, 85, .9)",
-    "series": "Railgun"
+    "series": "Railgun",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Genius contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 18,
     "name": "PSI-missing",
     "backgroundColor": "#1f232a",
     "lineColor": "rgba(192, 162, 56, .9)",
-    "series": "Index"
+    "series": "Index",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Animelyrics.com contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 19,
     "name": "masterpiece",
     "backgroundColor": "#182334",
     "lineColor": "rgba(95, 145, 197, .9)",
-    "series": "Index"
+    "series": "Index",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 20,
@@ -158,7 +310,15 @@
     "nameOriginal": "Rimless ～フチナシノセカイ～",
     "backgroundColor": "#383551",
     "lineColor": "rgba(213, 203, 224, .9)",
-    "series": "Index"
+    "series": "Index",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 21,
@@ -166,14 +326,30 @@
     "nameOriginal": "誓い言 ～スコシだけもう一度～",
     "backgroundColor": "#383551",
     "lineColor": "rgba(213, 203, 224, .9)",
-    "series": "Index"
+    "series": "Index",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense and Anime Songs Lyrics contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 22,
     "name": "No buts!",
     "backgroundColor": "#243e65",
     "lineColor": "rgba(137, 185, 224, .9)",
-    "series": "Index"
+    "series": "Index",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 23,
@@ -185,14 +361,30 @@
       {
         "name": "Toaru Majutsu no TV Songs"
       }
-    ]
+    ],
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 24,
     "name": "Magic∞world",
     "backgroundColor": "#411c2b",
     "lineColor": "rgba(224, 206, 215, .9)",
-    "series": "Index"
+    "series": "Index",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors (offset modified by Joehu)",
+      "music": "YouTube"
+    }
   },
   {
     "id": 25,
@@ -200,21 +392,45 @@
     "nameOriginal": "メモリーズ・ラスト",
     "backgroundColor": "#1f2c45",
     "lineColor": "rgba(165, 203, 246, .9)",
-    "series": "Index"
+    "series": "Index",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 26,
     "name": "Gravitation",
     "backgroundColor": "#2e323b",
     "lineColor": "rgba(210, 206, 200, .9)",
-    "series": "Index"
+    "series": "Index",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors (offset modified by Joehu)",
+      "music": "YouTube"
+    }
   },
   {
     "id": 27,
     "name": "ROAR",
     "backgroundColor": "#353e48",
     "lineColor": "rgba(189, 198, 210, .9)",
-    "series": "Index"
+    "series": "Index",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   },
   {
     "id": 28,
@@ -223,7 +439,15 @@
     "backgroundColor": "#161c41",
     "lineColor": "rgba(203, 202, 204, .9)",
     "series": "Index",
-    "tvSize": true
+    "tvSize": true,
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors (offset modified by Joehu)",
+      "music": "YouTube"
+    }
   },
   {
     "id": 29,
@@ -232,20 +456,44 @@
     "backgroundColor": "#14222b",
     "lineColor": "rgba(196, 218, 238, .9)",
     "series": "Index",
-    "tvSize": true
+    "tvSize": true,
+    "credits": {
+      "lyrics": {
+        "original": "Lyrical Nonsense contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "Joehu",
+      "music": "YouTube"
+    }
   },
   {
     "id": 30,
     "name": "Shadow is the Light",
     "backgroundColor": "#281a31",
     "lineColor": "rgba(242, 234, 239, .9)",
-    "series": "Accelerator"
+    "series": "Accelerator",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors (slightly modified by Joehu)"
+      },
+      "timing": "LRCLIB contributors (offset modified by Joehu)",
+      "music": "YouTube"
+    }
   },
   {
     "id": 31,
     "name": "Parole",
     "backgroundColor": "#222a34",
     "lineColor": "rgba(192, 190, 187, .9)",
-    "series": "Accelerator"
+    "series": "Accelerator",
+    "credits": {
+      "lyrics": {
+        "original": "LRCLIB contributors",
+        "romanized": "Lyrical Nonsense contributors"
+      },
+      "timing": "LRCLIB contributors",
+      "music": "YouTube"
+    }
   }
 ]
