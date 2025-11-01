@@ -315,7 +315,7 @@ const Main = () => {
           zIndex: 727,
           opacity: credits ? "1" : "0",
         }}
-        className="mainImageCredits">Credits:<br />Lyrics (original): {SongData[songIndex].credits.lyrics.original}<br />Lyrics (romanized): {SongData[songIndex].credits.lyrics.romanized}<br />Timing: {SongData[songIndex].credits.timing}<br />Music: {SongData[songIndex].credits.music}</div>
+        className="mainImageCredits">Credits:<br />Lyrics (original): {SongData[songIndex].credits.lyrics.original}<br />Lyrics (romanized): {SongData[songIndex].credits.lyrics.romanized}<br />Timing: {SongData[songIndex].credits.timing}<br />Music: {SongData[songIndex].credits.music}<br />Wallpaper Development: Joehu and Cube</div>
       {filteredSongData.map((song, i) => (
         <img
           key={i}
