@@ -12,6 +12,11 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  font-size: x-large;
+  font-weight: bold;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -61,6 +66,7 @@ code {
   color: white;
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;

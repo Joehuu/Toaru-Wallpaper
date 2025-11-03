@@ -315,7 +315,16 @@ const Main = () => {
           zIndex: 727,
           opacity: credits ? "1" : "0",
         }}
-        className="mainImageCredits">Credits:<br />Lyrics (original): {SongData[songIndex].credits.lyrics.original}<br />Lyrics (romanized): {SongData[songIndex].credits.lyrics.romanized}<br />Timing: {SongData[songIndex].credits.timing}<br />Music: {SongData[songIndex].credits.music}<br />Wallpaper Development: Joehu and Cube</div>
+        className="mainImageCredits">
+        <h1>Credits</h1>
+        <ul class="pl-5 list-disc">
+          <li>Lyrics (original): {SongData[songIndex].credits.lyrics.original}</li>
+          <li>Lyrics (romanized): {SongData[songIndex].credits.lyrics.romanized}</li>
+          <li>Timing: {SongData[songIndex].credits.timing}</li>
+          <li>Music: {SongData[songIndex].credits.music}</li>
+          <li>Wallpaper Development: Joehu and Cube</li>
+        </ul>
+      </div>
       {filteredSongData.map((song, i) => (
         <img
           key={i}
