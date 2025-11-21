@@ -32,6 +32,7 @@ const Main = () => {
   const [use24HourClock, set24HourClock] = React.useState(true);
   const [series, setSeries] = React.useState(Series.Railgun);
   const [credits, setCredits] = React.useState(false);
+  const [playCounts, setPlayCounts] = React.useState({});
   const filteredSongData = SongData.filter(song => song.series.toLowerCase() === series || series === Series.All);
   const getFilteredSongList = () => songList[mode - 1].filter(i => filteredSongData.map(song => song.id).includes(i));
   const audioRef = React.useRef(new Audio());
@@ -84,6 +85,14 @@ const Main = () => {
   const getFilteredSongIndex = filteredSongData.findIndex(x => x.id === songIndex + 1);
 
   const changeSong = (e) => {
+    const tempDict = { ...playCounts };
+    if (tempDict[songIndex + 1]) {
+      tempDict[songIndex + 1] += 1;
+    } else {
+      tempDict[songIndex + 1] = 1;
+    }
+    setPlayCounts(tempDict);
+    localStorage.setItem("index-play-counts", JSON.stringify(tempDict));
     //Changes the song using conditions ~from player
     if (mode === 0) {
       //Default Playlist
@@ -255,6 +264,11 @@ const Main = () => {
           ? localStorage.getItem("index-series")
           : Series.Railgun,
       )
+      setPlayCounts(
+        localStorage.getItem("index-play-counts") !== null
+          ? JSON.parse(localStorage.getItem("index-play-counts"))
+          : {},
+      )
       if (localStorage.getItem("railgun-repeat-shuffle") !== null) {
         let temp14 = JSON.parse(localStorage.getItem("railgun-repeat-shuffle"));
         setReplay(temp14[0]);
@@ -315,7 +329,7 @@ const Main = () => {
           zIndex: 727,
           opacity: credits ? "1" : "0",
         }}
-        className="mainImageCredits">Credits:<br />Lyrics (original): {SongData[songIndex].credits.lyrics.original}<br />Lyrics (romanized): {SongData[songIndex].credits.lyrics.romanized}<br />Timing: {SongData[songIndex].credits.timing}<br />Music: {SongData[songIndex].credits.music}<br />Wallpaper Development: Joehu and Cube</div>
+        className="mainImageCredits">Play Count: {playCounts[songIndex + 1] || 0}<br />Credits:<br />Lyrics (original): {SongData[songIndex].credits.lyrics.original}<br />Lyrics (romanized): {SongData[songIndex].credits.lyrics.romanized}<br />Timing: {SongData[songIndex].credits.timing}<br />Music: {SongData[songIndex].credits.music}<br />Wallpaper Development: Joehu and Cube</div>
       {filteredSongData.map((song, i) => (
         <img
           key={i}
