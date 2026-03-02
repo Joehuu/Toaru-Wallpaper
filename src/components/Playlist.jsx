@@ -1,6 +1,5 @@
 import React from "react";
 import PlaylistItem from "./PlaylistItem";
-import SongData from "./SongData.json";
 
 const Playlist = (props) => {
   const [playlistPages, setPlaylistPages] = React.useState(0);

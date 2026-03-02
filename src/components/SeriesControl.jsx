@@ -1,4 +1,3 @@
-import SongData from "./SongData.json";
 import Series from "../Series";
 
 const SeriesControl = (props) => {
