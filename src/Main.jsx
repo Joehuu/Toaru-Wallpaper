@@ -8,7 +8,7 @@ import Playlist from "./components/Playlist";
 import TitleDisplay from "./TitleDisplay";
 import LyricsDisplay from "./LyricsDisplay";
 import Series from "./Series";
-import { toFilename } from "./helpers";
+import { convertWPEColorToCSS, toFilename } from "./helpers";
 import Lyrics from "./components/Lyrics";
 import SeriesControl from "./components/SeriesControl";
 
@@ -35,7 +35,14 @@ const Main = () => {
   const filteredSongData = SongData.filter(song => song.series.toLowerCase() === series || series === Series.All);
   const getFilteredSongList = () => songList[mode - 1].filter(i => filteredSongData.map(song => song.id).includes(i));
   const [showSeconds, setShowSeconds] = React.useState(true);
+  const [overrideBackgroundColor, setOverrideBackgroundColor] = React.useState(false);
+  const [customBackgroundColor, setCustomBackgroundColor] = React.useState("#000000");
+  const [overrideLineColor, setOverrideLineColor] = React.useState(false);
+  const [customLineColor, setCustomLineColor] = React.useState("#ffffff");
   const audioRef = React.useRef(new Audio());
+
+  const backgroundColor = overrideBackgroundColor ? customBackgroundColor : SongData[songIndex].backgroundColor;
+  const lineColor = overrideLineColor ? customLineColor : SongData[songIndex].lineColor;
 
   const playerHandler = () => {
     //Changes and sets the music player
@@ -295,6 +302,12 @@ const Main = () => {
         if (properties.lyricsdisplay) setLyricsDisplay(properties.lyricsdisplay.value)
         if (properties.use24hourclock) set24HourClock(properties.use24hourclock.value)
         if (properties.showseconds) setShowSeconds(properties.showseconds.value)
+        if (properties.overridebackgroundcolor) setOverrideBackgroundColor(properties.overridebackgroundcolor.value)
+        if (properties.custombackgroundcolor) setCustomBackgroundColor(convertWPEColorToCSS(properties.custombackgroundcolor.value))
+        // Wallpaper Engine properties are named with "accent" instead of "line" as the color is being used in places other than border lines
+        // TODO: rename line color to accent color in another refactor
+        if (properties.overrideaccentcolor) setOverrideLineColor(properties.overrideaccentcolor.value)
+        if (properties.customaccentcolor) setCustomLineColor(convertWPEColorToCSS(properties.customaccentcolor.value, .9))
       },
       setPaused: function (isPaused) {
         setWPEPaused(isPaused);
@@ -307,10 +320,10 @@ const Main = () => {
   return (
     <div
       className="Main"
-      style={{ backgroundColor: SongData[songIndex].backgroundColor }}
+      style={{ backgroundColor: backgroundColor }}
     >
       {audioVis === "true" ? (
-        <AudioVisualizer lineColor={SongData[songIndex].lineColor} />
+        <AudioVisualizer lineColor={lineColor} />
       ) : null}
       <div
         style={{
@@ -377,6 +390,8 @@ const Main = () => {
           series={series}
           filteredSongData={filteredSongData}
           getFilteredSongList={getFilteredSongList}
+          backgroundColor={backgroundColor}
+          lineColor={lineColor}
         />
       ) : null}
       {clock === "true" ? (
@@ -409,6 +424,8 @@ const Main = () => {
             audioRef={audioRef}
             uiVolume={uiVolume}
             lyricsDisplay={lyricsDisplay}
+            backgroundColor={backgroundColor}
+            lineColor={lineColor}
           />
         )
       }
