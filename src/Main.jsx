@@ -434,6 +434,8 @@ const Main = () => {
         uiVolume={uiVolume}
         series={series}
         changeSeries={changeSeries}
+        backgroundColor={backgroundColor}
+        lineColor={lineColor}
       />
    </div>
   );

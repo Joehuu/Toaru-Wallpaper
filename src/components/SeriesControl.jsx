@@ -14,7 +14,7 @@ const SeriesControl = (props) => {
   return (
     <div
       className="series-control-container"
-      style={{ border: `4.5px solid ${SongData[props.songIndex].lineColor}` }}
+      style={{ border: `4.5px solid ${props.lineColor}` }}
     >
       <div style={{
         opacity: ".85",
@@ -30,8 +30,8 @@ const SeriesControl = (props) => {
             className="h-1/2 w-1/3"
             onClick={() => onClick(child.toLowerCase())}
             style={{
-              backgroundColor: child.toLowerCase() === props.series ? SongData[props.songIndex].lineColor : `transparent`,
-              color: child.toLowerCase() === props.series ? SongData[props.songIndex].backgroundColor : `white`,
+              backgroundColor: child.toLowerCase() === props.series ? props.lineColor : `transparent`,
+              color: child.toLowerCase() === props.series ? props.backgroundColor : `white`,
               borderRadius: "5px",
               fontWeight: child.toLowerCase() === props.series ? "500" : "normal",
             }}
